@@ -20,16 +20,23 @@ public class ArithmeticBase
         {
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
+        
+        public enum SIGN
+        {
+            PLUS,
+            MINUS,
+            TIMES,
+            DIVIDES
+        }
         switch (s.toUpperCase()) 
         {
-            case "PLUS":
+            case SIGN.PLUS:
                 return x + y;
-            case "MINUS":
+            case SIGN.MINUS:
                 return x - y;
-            case "TIMES":
+            case SIGN.TIMES:
                 return x * y;
-            case "DIVIDE":
+            case SIGN.DIVIDES:
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
